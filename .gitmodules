@@ -19,9 +19,6 @@
 [submodule "bundle/SQLUtilities"]
 	path = bundle/SQLUtilities
 	url = https://github.com/vim-scripts/SQLUtilities.git
-[submodule "bundle/vim-buftabline"]
-	path = bundle/vim-buftabline
-	url = https://github.com/ap/vim-buftabline.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
