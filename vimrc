@@ -96,3 +96,5 @@ set directory=~/.vim/swapfiles
 
 set rtp+=~/.fzf
 nmap <leader>f :FZF<CR>
+
+let g:airline#extensions#tabline#enabled = 1
