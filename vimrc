@@ -39,13 +39,7 @@ set wildmenu
 set wildmode=longest,list,full
 
 " SQL indent settings
-autocmd BufNewFile,BufRead *.db2   set syntax=sql
-autocmd BufNewFile,BufRead *.txt   set syntax=sql
-autocmd BufNewFile,BufRead *.sql setlocal expandtab tabstop=4 shiftwidth=4 ai indentexpr=
-autocmd BufNewFile,BufRead *.db2 setlocal expandtab tabstop=4 shiftwidth=4 ai indentexpr=
-autocmd BufNewFile,BufRead *.txt setlocal expandtab tabstop=4 shiftwidth=4 ai indentexpr=
 autocmd BufNewFile,BufRead *.md setlocal expandtab tabstop=4 shiftwidth=4 ai indentexpr=
-
 
 " SQL syntax highlighlighting in pyton, use '''
 function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
@@ -81,8 +75,6 @@ let g:sqlutil_keyword_case = '\U'
 
 nmap <leader>S :set syntax=sql<CR>
 
-vmap <leader>ss !sqlformat --reindent --keywords upper --identifiers lower %
-
 set foldnestmax=1
 
 autocmd BufNewFile,BufRead *.c set colorcolumn=80
@@ -94,7 +86,7 @@ nmap <leader>p :set paste!<CR>
 set backupdir=~/.vim/swapfiles
 set directory=~/.vim/swapfiles
 
-set rtp+=~/.fzf
+set rtp+=~/devel/fzf
 nmap <leader>f :FZF<CR>
 
 let g:airline#extensions#tabline#enabled = 1
