@@ -40,6 +40,8 @@ set wildmode=longest,list,full
 
 " SQL indent settings
 autocmd BufNewFile,BufRead *.md setlocal expandtab tabstop=4 shiftwidth=4 ai indentexpr=
+autocmd BufNewFile,BufRead *.cpp setlocal expandtab tabstop=4 shiftwidth=4 softtabstop ai 
+autocmd BufNewFile,BufRead *.h setlocal expandtab tabstop=4 shiftwidth=4 softtabstop ai 
 
 " SQL syntax highlighlighting in pyton, use '''
 function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
