@@ -9,23 +9,24 @@ filetype plugin indent on
 
 " Pymode setttings
 let g:pymode_lint_ignore = "E402"
-set completeopt-=preview
 
 
 "let g:pymode = 0
 "let g:pymode_options_colorcolumn = 0
-let g:pymode_rope=0
-let g:pymode_rope_completion = 0
+"let g:pymode_rope=0
+"let g:pymode_rope_completion = 0
 let g:pymode_lint_cwindow = 0
-let g:pymode_rope_regenerate_on_write = 0
-let g:pymode_rope_lookup_project = 0
-let g:pymode_rope = 0
-let g:pymode_rope_lookup_project = 0
-let g:pymode_rope_complete_on_dot = 0
-let g:pymode_rope_autoimport = 0
-let g:pymode_folding = 0
+"let g:pymode_rope_regenerate_on_write = 0
+"let g:pymode_rope_lookup_project = 0
+"let g:pymode_rope = 0
+"let g:pymode_rope_lookup_project = 0
+"let g:pymode_rope_complete_on_dot = 0
+"let g:pymode_rope_autoimport = 0
+"let g:pymode_folding = 0
+"
+"let g:SimpylFold_fold_docstring = 0
 
-let g:SimpylFold_fold_docstring = 0
+set completeopt-=preview
 
 " Colorscheme settings
 set background=dark
@@ -82,6 +83,9 @@ set foldnestmax=1
 autocmd BufNewFile,BufRead *.c set colorcolumn=80
 autocmd BufNewFile,BufRead *.cu set colorcolumn=80
 autocmd BufNewFile,BufRead *.h set colorcolumn=80
+
+autocmd BufNewFile,BufRead *.vs set filetype=glsl
+autocmd BufNewFile,BufRead *.fs set filetype=glsl
 
 nmap <leader>p :set paste!<CR>
 
