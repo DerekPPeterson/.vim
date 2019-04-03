@@ -55,3 +55,6 @@
 [submodule "bundle/vim-glsl"]
 	path = bundle/vim-glsl
 	url = https://github.com/tikhomirov/vim-glsl.git
+[submodule "bundle/foldfunctions"]
+	path = bundle/foldfunctions
+	url = https://github.com/chrisjohnson/vim-foldfunctions.git

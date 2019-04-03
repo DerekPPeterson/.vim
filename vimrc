@@ -36,18 +36,20 @@ let g:SimpylFold_fold_docstring = 0
 " Colorscheme settings
 set background=dark
 colorscheme solarized
-if &diff
-    colorscheme pablo
-endif
 
 " Menu settings
 set wildmenu
 set wildmode=longest,list,full
 
+autocmd BufEnter *.t :setlocal filetype=cpp
+
 setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 ai 
 autocmd BufNewFile,BufRead *.md setlocal expandtab tabstop=4 shiftwidth=4 ai indentexpr= 
 autocmd BufNewFile,BufRead *.cpp setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 ai 
+autocmd BufNewFile,BufRead *.cxx setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 ai 
 autocmd BufNewFile,BufRead *.h setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 ai 
+autocmd BufNewFile,BufRead *.hpp setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 ai 
+autocmd BufNewFile,BufRead *.t setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 ai 
 
 " SQL syntax highlighlighting in pyton, use '''
 function! TextEnableCodeSnip(filetype,start,end,textSnipHl) abort
@@ -86,6 +88,7 @@ nmap <leader>S :set syntax=sql<CR>
 "set foldnestmax=1
 
 autocmd BufNewFile,BufRead *.c set colorcolumn=80
+autocmd BufNewFile,BufRead *.cpp set colorcolumn=80
 autocmd BufNewFile,BufRead *.cu set colorcolumn=80
 autocmd BufNewFile,BufRead *.h set colorcolumn=80
 
@@ -104,5 +107,7 @@ nmap <leader>e :lnext<CR>
 nmap <leader>E :lprev<CR>
 
 set hlsearch
+set cursorline
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
